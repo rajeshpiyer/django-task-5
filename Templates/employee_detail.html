@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ employee.name }} Detail</title>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <h1>{{ employee.name }} Detail</h1>
+    <div>
+        <p><strong>Name:</strong> {{ employee.name }}</p>
+        <p><strong>Age:</strong> {{ employee.age }}</p>
+        <p><strong>Company:</strong> {{ employee.company_id.name }}</p>
+        <p><strong>Address:</strong> {{ employee.house_name }}, {{ employee.street }}, {{ employee.city }}, {{ employee.state }}</p>
+        <p><strong>Pincode:</strong> {{ employee.pincode }}</p>
+        <p><strong>Salary:</strong> {{ employee.salary }}</p>
+    </div>
+</body>
+</html>
