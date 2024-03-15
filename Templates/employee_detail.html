@@ -1,22 +1,71 @@
+<!-- employee_details.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ employee.name }} Detail</title>
+    <title>Employee Details</title>
     <style>
-        /* Add your CSS styles here */
+        /* CSS styles for better appearance */
+        .employee-details {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .employee-details img {
+            max-width: 200px;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
+        }
+        .employee-details label {
+            font-weight: bold;
+        }
+        .employee-details .field {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
-    <h1>{{ employee.name }} Detail</h1>
-    <div>
-        <p><strong>Name:</strong> {{ employee.name }}</p>
-        <p><strong>Age:</strong> {{ employee.age }}</p>
-        <p><strong>Company:</strong> {{ employee.company_id.name }}</p>
-        <p><strong>Address:</strong> {{ employee.house_name }}, {{ employee.street }}, {{ employee.city }}, {{ employee.state }}</p>
-        <p><strong>Pincode:</strong> {{ employee.pincode }}</p>
-        <p><strong>Salary:</strong> {{ employee.salary }}</p>
+    <div class="employee-details">
+        <h2>Employee Details</h2>
+        <img src="{{ employee.profile_pic.url }}" alt="Profile Picture">
+        <div class="field">
+            <label>Name:</label>
+            <span>{{ employee.name }}</span>
+        </div>
+        <div class="field">
+            <label>Age:</label>
+            <span>{{ employee.age }}</span>
+        </div>
+        <div class="field">
+            <label>House Name:</label>
+            <span>{{ employee.house_name }}</span>
+        </div>
+        <div class="field">
+            <label>Street:</label>
+            <span>{{ employee.street }}</span>
+        </div>
+        <div class="field">
+            <label>City:</label>
+            <span>{{ employee.city }}</span>
+        </div>
+        <div class="field">
+            <label>State:</label>
+            <span>{{ employee.state }}</span>
+        </div>
+        <div class="field">
+            <label>Pincode:</label>
+            <span>{{ employee.pincode }}</span>
+        </div>
+        <div class="field">
+            <label>Salary:</label>
+            <span>{{ employee.salary }}</span>
+        </div>
     </div>
 </body>
 </html>
+

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+        <title>Company Form</title>
+    </head>
+    <body>
+        <h2>Add a Company</h2>
+        <form method="post" action="{% url 'company_form' %}">
+            {% csrf_token %}
+            {{ form_company.as_p}}
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
