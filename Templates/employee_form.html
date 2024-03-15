@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Employee Form</h1>
-    <form method="post" action="{% url 'employee_form' %}">
+    <form method="post" enctype="multipart/form-data" action="{% url 'employee_form' %}">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Submit</button>

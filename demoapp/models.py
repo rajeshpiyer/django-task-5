@@ -10,7 +10,7 @@ class Company(models.Model):
 class Employee(models.Model):
     company_id = models.ForeignKey(Company, on_delete=models.CASCADE)
     name = models.CharField(max_length = 225)
-    profile_pic = models.FileField(upload_to = "uploads/")
+    profile_pic = models.FileField(upload_to="uploads/", null=True, blank=True)
     age = models.IntegerField(default = 18)
     house_name = models.CharField(max_length = 225)
     street = models.CharField(max_length = 225)

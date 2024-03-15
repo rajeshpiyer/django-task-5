@@ -35,10 +35,10 @@
 <body>
     <h1>Welcome to Our Website</h1>
     <div class="button-container">
-        <a class="button" href="company-form/">Add Company</a>
-        <a class="button" href="first-view/">View Company</a>
-        <a class="button" href="employee-form/">Add Employee</a>
-        <a class="button" href="second-view/">View Employee</a>
+        <a class="button" href="{% url 'company_form' %}">Add Company</a>
+        <a class="button" href="{% url 'first-view' %}">View Company</a>
+        <a class="button" href="{% url 'employee_form' %}">Add Employee</a>
+        <a class="button" href="{% url 'second-view' %}">View Employee</a>
     </div>
 </body>
 </html>
